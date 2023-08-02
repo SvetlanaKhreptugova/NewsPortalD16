@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+<h1>Добавить/Редактировать:</h1>
+<h7>При выборе конкретной статьи(новости) происхоит редактирование.
+    При выборе create, можно добавить статью(новость).
+</h7>
+<hr>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Добавить"/>
+</form>
+{% endblock content %}
